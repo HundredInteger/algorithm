@@ -3,7 +3,7 @@
 예를들어 arr이 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, [10]면 [-1]을 리턴 합니다.
 
 
-1.if문을 사용하여 배열 값이 0인 경우 1개 생성하여 그 값을 -1로 설정(question10번에서 사용한대로)
+1.if문을 사용하여 배열 값이 1인 경우 1개 생성하여 그 값을 -1로 설정(question10번에서 사용한대로)
 2.가장 작은 원소를 찾아서 제거... -> java 원소 제거 검색 -> Arraylist 사용 -> remove 메서드로 사용
 출처 : https://ko.myservername.com/remove-delete-an-element-from-an-array-java
 
@@ -60,7 +60,7 @@ class Solution {
 
 //ArrayList를 사용하지 않고 쓰는 방법
 
-/*
+
 class Solution {
     public int[] solution(int[] arr) {
         if(arr.length == 1){
@@ -69,15 +69,15 @@ class Solution {
         }
 
         int[] answer = new int[arr.length-1];
-        int minIndex=0;
+        int min=0;  // 첫번째값을 최소값으로 일단 지정
 
         for(int i=0;i<arr.length;i++){
-            if(arr[minIndex]>arr[i]){
-                minIndex = i;
+            if(arr[min]>arr[i]){ //지정한 최소값보다 값이 작은 배열의 원소가 있다면 최소값을 바꿔줌
+                min = i;
             }
         }
-        for(int i=minIndex+1;i<arr.length;i++){
-            arr[i-1] = arr[i];  // 1번째값이 이제 0번째값이 되는것!
+        for(int i=min+1;i<arr.length;i++){
+            arr[i-1] = arr[i];  // min+1부터시작이니 결국 arr[min] = arr[min+1]으로써 최소값 그 다음 값이 이제 최소값이되고 최소값은 사라지게됨.
         }
         for(int i=0;i<answer.length;i++){
             answer[i] = arr[i]; // 위에서 answer의 배열값도 -1해줬고, arr의 배열값도 for구문을 통해 -1해줬으니 배열의 길이는 동일하고 arr을 통해최소값제거
@@ -85,4 +85,4 @@ class Solution {
         return answer;
     }
 }
-*/
+
