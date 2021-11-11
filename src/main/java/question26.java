@@ -13,7 +13,7 @@ import java.util.ArrayList;
 class Solution {
     public int[] solution(int[] arr) {
         int[] answer = {};
-        ArrayList<Integer> idx = new ArrayList<Integer>(); // 배열에서 바로 삭제가 안됨으로 arraylist생성
+        List<Integer> idx = new ArrayList<>(); // 배열에서 바로 삭제가 안됨으로 arraylist생성
         int min = 0; // 첫번째 값이 일단 무조건 제일 작은 값이라고 가정
 
         if(arr.length == 1) {
@@ -78,7 +78,7 @@ class Solution {
         }
         for(int i=min+1;i<arr.length;i++){
             arr[i-1] = arr[i];  // min+1부터시작이니 결국 arr[min] = arr[min+1]으로써 최소값 그 다음 값이 이제 최소값이되고 최소값은 사라지게됨.
-        }
+        }  arr[min=arr2]
         for(int i=0;i<answer.length;i++){
             answer[i] = arr[i]; // 위에서 answer의 배열값도 -1해줬고, arr의 배열값도 for구문을 통해 -1해줬으니 배열의 길이는 동일하고 arr을 통해최소값제거
         }
