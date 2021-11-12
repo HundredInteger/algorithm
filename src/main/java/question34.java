@@ -28,7 +28,7 @@ class Solution {
 
         int max = Math.max(Math.max(scores[0], scores[1]), scores[2]);// max값 구하기
         ArrayList<Integer> list = new ArrayList<Integer>();
-        if (max == scores[0]) list.add(1);
+        if (max == scores[0]) list.add(1);// 리스트 1번째 위치에 값을 추가하는 함수
         if (max == scores[1]) list.add(2);
         if (max == scores[2]) list.add(3);
         // max값이 등록된 scores의 list에 추가
