@@ -12,6 +12,7 @@ class Solution {
         String[] word = {"zero","one","two","three","four","five","six","seven","eight","nine"};
         for(int i =0 ; i<10 ; i++){
             if(s.contains(word[i])) {  // 문자로 표현 된 값이 있으면
+
                 s = s.replace(word[i], Integer.toString(i));  //s가 string이기때문에 지정 된 정수를 나타내는 string객체로 리턴해주는 Integer.toString 사용(하단참조)
 
             }
