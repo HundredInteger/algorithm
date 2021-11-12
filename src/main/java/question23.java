@@ -1,14 +1,15 @@
 class Solution {
     public int[] solution(long n) {
-        int[] answer = {};
+        String a = "" + n;
+        int[] answer = new int[a.length()];
         int sum = 0;
-        for(int i = 0 ; i < n ; i++) {
+
             while (n != 0) {
-                sum == n % 10;
-                answer[i] = sum;
+                answer[sum] = (int)(n % 10);
                 n /= 10;
+                sum++;
             }
-        }
+
         return answer;
     }
 }
