@@ -4,7 +4,7 @@
 2.짝수번째는 대문자 / 홀수번째는 소문자 -> 그 숫자 그방법으로해야할듯?
  */
 
-class Solution {
+class question01 {
     public String solution(String s) {
 
         String answer = "";

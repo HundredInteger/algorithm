@@ -1,6 +1,6 @@
 import java.util.*; // java.util.Arrays;만 해도 괜찮음
 
-class Solution {
+public class solution {
     public String solution(String[] participant, String[] completion) {
 
         int i;
